@@ -93,7 +93,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         raise_layer {
