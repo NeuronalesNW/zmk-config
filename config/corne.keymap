@@ -54,7 +54,7 @@
         compatible = "zmk,behavior-sensor-rotate-var";
         label = "BT_PROFILE_SWITCHER";
         #sensor-binding-cells = <2>;
-        bindings = <&bt>, <&bt>;
+        bindings = <&kp>, <&kp>;
     };
 
     keymap {
