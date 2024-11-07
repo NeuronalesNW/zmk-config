@@ -27,6 +27,8 @@
             label = "BT_SWITCHPROFILE";
             #sensor-binding-cells = <0>;
             bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+
+            tap-ms = <100>;
         };
 
         mmv {
