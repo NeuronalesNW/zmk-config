@@ -100,7 +100,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <bt_Profile_Switcher BT_NXT BT_PRV>;
+            sensor-bindings = <bt_Profile_Switcher K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         raise_layer {
