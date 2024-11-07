@@ -31,6 +31,15 @@
             tap-ms = <100>;
         };
 
+        scroll_encoder2: scroll_encoder2 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ENCODER2";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
+
+            tap-ms = <30>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -124,7 +133,7 @@
             >;
 
             label = "SYMBOL";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder2>;
         };
 
         layer_3 {
