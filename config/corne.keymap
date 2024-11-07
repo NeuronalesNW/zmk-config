@@ -50,7 +50,7 @@
         tap-ms = <30>;
     };
 
-    bt_Profile_Switcher: rgb_encoder {
+    bt_Profile_Switcher: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         label = "BT_PROFILE_SWITCHER";
         #sensor-binding-cells = <0>;
