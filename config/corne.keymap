@@ -22,6 +22,13 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        BT_SwitchProfile: BT_SwitchProfile {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "BT_SWITCHPROFILE";
+            #sensor-binding-cells = <0>;
+            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -94,7 +101,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&BT_SwitchProfile>;
         };
 
         raise_layer {
