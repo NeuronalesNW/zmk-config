@@ -51,10 +51,10 @@
     };
 
     bt_Profile_Switcher: sensor_rotate_kp {
-        compatible = "zmk,behavior-sensor-rotate";
+        compatible = "zmk,behavior-sensor-rotate-var";
         label = "BT_PROFILE_SWITCHER";
-        #sensor-binding-cells = <0>;
-        bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+        #sensor-binding-cells = <2>;
+        bindings = <&bt>, <&bt>;
     };
 
     keymap {
@@ -100,7 +100,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <bt_Profile_Switcher>;
+            sensor-bindings = <bt_Profile_Switcher BT_NXT BT_PRV>;
         };
 
         raise_layer {
