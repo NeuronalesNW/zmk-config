@@ -93,7 +93,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&bt BT_SEL 0 BT_SEL 1>;
         };
 
         raise_layer {
