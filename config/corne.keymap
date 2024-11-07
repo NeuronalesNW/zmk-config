@@ -93,7 +93,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <&inc_dec_kp C_KEYBOARD_INPUT_ASSIST_NEXT C_KEYBOARD_INPUT_ASSIST_PREVIOUS>;
+            sensor-bindings = <&bt BT_NXT BT_PRV>;
         };
 
         raise_layer {
