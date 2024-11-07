@@ -50,13 +50,6 @@
         tap-ms = <30>;
     };
 
-    bt_Profile_Switcher: sensor_rotate_kp {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        label = "BT_PROFILE_SWITCHER";
-        #sensor-binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -100,7 +93,7 @@
             >;
 
             label = "NUMBER";
-            sensor-bindings = <bt_Profile_Switcher K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
