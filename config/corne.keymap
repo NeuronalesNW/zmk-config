@@ -104,11 +104,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&rgb_ug RGB_ON   &kp N1           &kp N2           &kp N3           &kp N4           &kp N5             &mmv MOVE_UP     &kp N6   &kp N7    &kp N8        &kp N9     &kp N0    &kp BSPC
-&rgb_ug RGB_OFF  &trans           &trans           &trans           &trans           &trans             &mmv MOVE_DOWN   &trans   &trans    &kp UP        &trans     &kp HOME  &kp PG_UP
-&rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &mmv MOVE_LEFT   &trans   &kp LEFT  &kp DOWN      &kp RIGHT  &kp END   &kp PG_DN
-                                  &bt BT_CLR       &trans           &trans           &kp SPACE          &mmv MOVE_RIGHT  &kp INS  &kp DEL   &kp LEFT_ALT
-                                                                                                        &mkp LCLK
+&rgb_ug RGB_ON   &kp N1           &kp N2           &kp N3           &kp N4  &kp N5       &mmv MOVE_UP     &kp N6   &kp N7    &kp N8        &kp N9     &kp N0    &kp BSPC
+&rgb_ug RGB_OFF  &trans           &trans           &trans           &trans  &trans       &mmv MOVE_DOWN   &trans   &trans    &kp UP        &trans     &kp HOME  &kp PG_UP
+&rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &trans  &trans       &mmv MOVE_LEFT   &trans   &kp LEFT  &kp DOWN      &kp RIGHT  &kp END   &kp PG_DN
+                                  &bt BT_CLR       &trans           &trans  &kp SPACE    &mmv MOVE_RIGHT  &kp INS  &kp DEL   &kp LEFT_ALT
+                                                                                         &mkp LCLK
             >;
 
             label = "NUMBER";
@@ -125,11 +125,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                      &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
-                                                                       &mkp LCLK
+&trans  &kp EXCL  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &trans    &trans     &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
+                  &trans     &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &kp LEFT_ALT
+                                                                &mkp LCLK
             >;
 
             label = "SYMBOL";
@@ -139,15 +139,15 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5    &mmv MOVE_LEFT   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                    &kp C_MUTE  &trans       &trans     &trans      &mmv MOVE_RIGHT  &trans       &trans     &trans
-                                                                    &mkp LCLK
+&out OUT_BLE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                               &mmv MOVE_UP     &kp F6       &kp F7  &kp F8       &kp F9      &kp F10          &kp F11
+&out OUT_USB    &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(181,100,49)    &mmv MOVE_DOWN   &bootloader  &trans  &trans       &trans      &kp PRINTSCREEN  &kp F12
+&rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD                      &mmv MOVE_LEFT   &trans       &trans  &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                 &kp C_MUTE       &trans           &trans           &trans                               &mmv MOVE_RIGHT  &trans       &trans  &trans
+                                                                                                                         &mkp LCLK
             >;
 
             label = "FN";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
