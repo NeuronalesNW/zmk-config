@@ -58,6 +58,8 @@
         label = "RGB_ENCODER";
         #sensor-binding-cells = <0>;
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+
+        tap-ms = <30>;
     };
 
     scroll_encoder: scroll_encoder {
