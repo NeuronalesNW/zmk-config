@@ -40,6 +40,24 @@
             tap-ms = <30>;
         };
 
+        VM_A_Mutation: VM_A_Mutation {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VM_A_MUTATION";
+            bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        KP_A_AE: KP_A_AE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_A_AE";
+            bindings = <&kp A>, <&VM_A_Mutation>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -85,11 +103,11 @@
             //                                                      enter
 
             bindings = <
-&kp TAB    &kp Q  &kp W       &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S       &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X       &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                  &kp C_MUTE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &kp RALT
-                                                              &kp ENTER
+&kp TAB    &kp Q     &kp W       &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td0       &KP_A_AE  &kp S       &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z     &kp X       &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                     &kp C_MUTE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &kp RALT
+                                                                 &kp ENTER
             >;
 
             label = "QWERTY";
