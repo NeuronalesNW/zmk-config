@@ -47,7 +47,7 @@
             bindings = <&kp RA(Q)>, <&kp RA(LS(Q))>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT)>;
         };
 
         KP_A_AE: KP_A_AE {
