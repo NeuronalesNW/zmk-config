@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td0'
+  - '&td_Shift_Caps'
   - A
   - S
   - D
@@ -47,7 +47,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: '3'}
   - raise
-  - $$mdi:apple-keyboard-option$$
+  - '&td_rAlt_lAlt'
   - {t: '$$mdi:keyboard-return$$', type: enter}
   lower:
   - {t: '$$mdi:transfer$$', type: trans}
