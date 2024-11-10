@@ -15,9 +15,9 @@
 
 / {
     behaviors {
-        td0: td0 {
+        td_Shift_Caps: td_Shift_Caps {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
+            label = "TD_SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
@@ -38,6 +38,13 @@
             bindings = <&kp PAGE_UP>, <&kp PAGE_DOWN>;
 
             tap-ms = <30>;
+        };
+
+        td_rAlt_lAlt: td_rAlt_lAlt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RALT_LALT";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT>, <&kp LEFT_ALT>;
         };
 
         mmv {
@@ -85,11 +92,11 @@
             //                                                      enter
 
             bindings = <
-&kp TAB    &kp Q  &kp W       &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S       &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X       &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                  &kp C_MUTE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &kp RALT
-                                                              &kp ENTER
+&kp TAB         &kp Q  &kp W       &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I          &kp O    &kp P     &kp BSPC
+&td_Shift_Caps  &kp A  &kp S       &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X       &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESC
+                       &kp C_MUTE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &td_rAlt_lAlt
+                                                                   &kp ENTER
             >;
 
             label = "QWERTY";
