@@ -15,7 +15,7 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td_Shift_Caps'
-  - '&Umlaut_AE'
+  - A
   - S
   - D
   - F
