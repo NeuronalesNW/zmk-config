@@ -83,8 +83,7 @@
         umlaut_ae: umlaut_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp NO &kp XE4>;
-
+            bindings = <&macro_tap>, <&kp NO &kp XE4>;>
             label = "UMLAUT_AE";
         };
     };
