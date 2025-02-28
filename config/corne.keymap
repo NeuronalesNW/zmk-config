@@ -81,10 +81,10 @@
 
     macros {
         umlaut_ae: umlaut_ae {
+            label = "UMLAUT_AE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp NO &kp XE4>;>
-            label = "UMLAUT_AE";
+            bindings = <&macro_tap &kp N0 &kp XE4>;
         };
     };
 
