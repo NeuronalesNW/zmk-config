@@ -41,13 +41,6 @@
             bindings = <&kp RIGHT_ALT>, <&kp LEFT_ALT>;
         };
 
-        Umlaut_AE: Umlaut_AE {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UMLAUT_AE";
-            #binding-cells = <0>;
-            bindings = <&kp A>, <&umlaut_ae>;
-        };
-
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -79,15 +72,6 @@
         tap-ms = <30>;
     };
 
-    macros {
-        umlaut_ae: umlaut_ae {
-            label = "UMLAUT_AE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp N0 &kp XE4>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -102,11 +86,11 @@
             //                                                      enter
 
             bindings = <
-&kp TAB         &kp Q       &kp W       &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&td_Shift_Caps  &Umlaut_AE  &kp S       &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z       &kp X       &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESC
-                            &kp C_MUTE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &td_rAlt_lAlt
-                                                                        &kp ENTER
+&kp TAB         &kp Q  &kp W       &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I          &kp O    &kp P     &kp BSPC
+&td_Shift_Caps  &kp A  &kp S       &kp D     &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X       &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESC
+                       &kp C_MUTE  &kp LGUI  &mo 1  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &mo 2  &td_rAlt_lAlt
+                                                                   &kp ENTER
             >;
 
             label = "QWERTY";
